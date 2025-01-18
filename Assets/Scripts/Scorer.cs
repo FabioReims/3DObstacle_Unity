@@ -1,12 +1,13 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-    int hits = 0;
+    private int _hits;
     private void OnCollisionEnter(Collision other)
     {
-        hits++;
-        Debug.Log("You've collided with " + hits + " objects.");
+        if (!other.gameObject.CompareTag("Hit")){
+            _hits++;
+            Debug.Log("You've collided with "  + _hits + " objects.");
+        }
     }
 }
