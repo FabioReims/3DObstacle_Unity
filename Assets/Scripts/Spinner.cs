@@ -12,6 +12,6 @@ public class Spinner : MonoBehaviour
     
     void Update()
     {
-        transform.Rotate(xRotation,yRotation,zRotation);
+        transform.Rotate(Time.deltaTime * xRotation,Time.deltaTime * yRotation,Time.deltaTime * zRotation);
     }
 }
