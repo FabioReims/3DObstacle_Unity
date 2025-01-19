@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FlyAtPlayer : MonoBehaviour
@@ -5,6 +6,12 @@ public class FlyAtPlayer : MonoBehaviour
     [SerializeField] Transform player;
     private Vector3 _playerPos;
     [SerializeField] int obstacleSpeed;
+
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
+
     void Start()
     {
         _playerPos = player.transform.position;

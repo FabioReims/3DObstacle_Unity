@@ -13,6 +13,7 @@ public class TriggerProjectile : MonoBehaviour
                 if (proj != null)
                 {
                     proj.SetActive(true);
+                    Destroy(gameObject);
                 }
             }
         }
